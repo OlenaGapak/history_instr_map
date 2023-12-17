@@ -4,7 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Застосування комунікаційної моделі Лассвела до інструменталізації історії в публічному просторі</title>
+    <title>Applying Lasswell's Communication Model to the Instrumentalization of History</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            
+            padding-left: 200px;  /* Adjust the value to your preference */
+            padding-right: 200px; /* Adjust the value to your preference */
+        }
+
+        .header {
+            background-color: #F0F0F0;
+            color: black;
+            text-align: left;
+            padding: 1em;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .filter-column {
+            flex: 1;
+            padding: 1em;
+            background-color: #f5f5f5;
+        }
+
+        .filter-column span {
+            display: block;
+            margin-bottom: 1em;
+        }
+
+        .filter-column label {
+            font-weight: bold;
+            margin-bottom: 0.5em;
+            display: block;
+        }
+
+        .filter-column select {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .main-content {
+            flex: 2;
+            padding: 1em;
+        }
+    </style>
+
     <script type="text/javascript">
         var texts = [
             {
@@ -58,7 +107,7 @@
     <div class="header">
         <h1>Застосування комунікаційної моделі Лассвела до інструменталізації історії в публічному просторі</h1>
         
-        <p>Олена Гапак</p>
+        <p>Олена Гапак, MSPH25</p>
         <p>Як зазначає історикиня Маргарет МакМіллан, "Минуле може бути використаним майже для будь-чого, що ми робимо в теперішньому". І дійсно, масштаби використання історії в публічному просторі вражають: інструменталізація історії присутня в політиці, масовій культурі, індустрії розваг, маркетингових стратегіях брендів. Цьому питанню присвячено багато досліджень і літератури, але така література здебільшого концентрується на окремих типах інструменталізації. </p>
 
         <p>Чи можлива спільна міждисциплінарна рамка, яка створила своєрідну мапу різноманітних різновидів інструменталізації історії? Чи була б така рамка корисною для осмислення цього феномену?  </p>
@@ -66,7 +115,7 @@
 
         <p>Я спробую розглянути модель Гарольда Лассвела і застосувати її до інструменталізації історії в публічному просторі. Комунікаційна модель, відома у вигляді формули “Who, said what, in which channel, to whom, with what effect?” побутує в гуманітарних науках понад 75 років і визнана класичною, проте зазнає критики як спрощена, обмежена в категоріяї, лінійна чи застаріла. Проте я вважаю, що вона може бути продуктивною для аналізу та "картографування" інструменталізації історії. У статті Reading Lasswell’s Model of Communication Backward  Захарі Сапьєнца зі співавторами розбирає кілька типових помилок у трактуванні цієї моделі (як вони пропонують називати "конструктом Лассвела", вважаючи формули, графічні моделі та мнемонічни фрази лише пізнішими втіленнями базового конструкта). Наприклад, вони наголошують на тому, що Лассвел неодноразово закликав додавати категорії до своєї моделі залежно від потреб дослідника і контексту. І в 1968 році навіть сам контекстуалізував модель для застосування у політичній комунікації: “Who, with what intentions, in what situations, with what assets, using what strategies, reaches what audiences, with what result?” (Lasswell, 1968, p. 62). Інші дослідники також додавали категорії: "за яких обставин", "з якою метою" (Richard Braddock’s “An Extension of Lasswell’s Formula” Braddock (1958)), "використовуючи яку мову" (Glozman and Tupper (2003)), "в якому контексті (соціальному, економічному, культурному, політичному, естетичному)" (Watson and Hill (1997)). </p>
 
-        <p>Використовуючи вже існуючи розширення моделі Лассвела (наприклад, мені здається важливим "з якою метою" та "в якому контексті"), а також додаючи власні категорії (як буде показано нижче, я вважаю доцільним враховувати не тільки аудиторію to whom, але й потребу аудиторії, яка задовольняється), – я спробую запропонувати теоретичну модель інструменталізації історії в публічному просторі. Я почну з опису категорій і потім перейду до прикладів і можливих практичних застосувань такої моделі.</p>
+        <p>Використовуючи вже існуючи розширення моделі Лассвела (наприклад, мені здається важливим "з якою метою" та "в якому контексті"), а також додаючи власні категорії (як буде показано нижче, я вважаю доцільним враховувати не тільки аудиторію to whom, але й потребу аудиторії, яка задовольняється), – я спробую запропонувати теоретичну модель інструменталізації історії в публічному просторі.</p>
         <hr>
     </div>
 
@@ -75,9 +124,13 @@
         <span>
             <label>Актор (who)</label>
             <select id="select-cat1" name="cat 1">
-                <option value="">Nothing</option>
-                <option value="option 1">Option 1</option>
-                <option value="option 2">Option 2</option>
+                <option value="">Не вибрано</option>
+                <option value="option 1">Держава</option>
+                <option value="option 2">Державна інституція</option>
+                <option value="option 3">Політична сила</option>
+                <option value="option 4">Суспільний рух</option>
+                <option value="option 5">Корпорація (фірма, бренд)</option>
+                <option value="option 6">Публічна особа (селебріті, публічний інтелектуал)</option>
             </select>
         </span>
         <span>
@@ -89,7 +142,7 @@
             </select>
         </span>
         <span>
-            <label>Меседж (said what)</label>
+            <label>Мета (with what purposes)</label>
             <select id="select-cat2" name="cat 2">
                 <option value="">Nothing</option>
                 <option value="other option 1">Option 1</option>
@@ -97,7 +150,7 @@
             </select>
         </span>
         <span>
-            <label>Меседж (said what)</label>
+            <label>Контекст (in what context)</label>
             <select id="select-cat2" name="cat 2">
                 <option value="">Nothing</option>
                 <option value="other option 1">Option 1</option>
@@ -105,7 +158,31 @@
             </select>
         </span>
         <span>
-            <label>Меседж (said what)</label>
+            <label>Прийом (using what method)</label>
+            <select id="select-cat2" name="cat 2">
+                <option value="">Nothing</option>
+                <option value="other option 1">Option 1</option>
+                <option value="other option 2">Option 2</option>
+            </select>
+        </span>
+          <span>
+            <label>Медіум (in which channel)</label>
+            <select id="select-cat2" name="cat 2">
+                <option value="">Nothing</option>
+                <option value="other option 1">Option 1</option>
+                <option value="other option 2">Option 2</option>
+            </select>
+        </span>
+            <span>
+            <label>Аудиторія (to whom)</label>
+            <select id="select-cat2" name="cat 2">
+                <option value="">Nothing</option>
+                <option value="other option 1">Option 1</option>
+                <option value="other option 2">Option 2</option>
+            </select>
+        </span>
+            <span>
+            <label>Потреба аудиторії (meeting what needs)</label>
             <select id="select-cat2" name="cat 2">
                 <option value="">Nothing</option>
                 <option value="other option 1">Option 1</option>
