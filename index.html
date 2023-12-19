@@ -6,73 +6,12 @@
     <link rel="stylesheet" href="styles.css">
     <title>Applying Lasswell's Communication Model to the Instrumentalization of History</title>
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            
-            /* padding-left: 200px;  /* Adjust the value to your preference */
-            /* padding-right: 200px; /* Adjust the value to your preference */
-        }
-
-        .header {
-            background-color: #f5f5f5;
-            color: black;
-            text-align: left;
-            padding: 1em;
-        }
-
-        .container {
-            display: flex;
-        }
-
-        .filter-column {
-            flex: 1;
-            padding: 1em;
-            background-color: #f5f5f5;
-        }
-
-        .filter-column span {
-            display: block;
-            margin-bottom: 1em;
-        }
-
-        .filter-column label {
-            font-weight: bold;
-            margin-bottom: 0.5em;
-            display: block;
-        }
-
-        .filter-column select {
-            width: 100%;
-            padding: 0.5em;
-            margin-bottom: 0.5em;
-        }
-
-        .main-content {
-            flex: 2;
-            padding: 1em;
-        }
+        
     </style>
 
-    <script type="text/javascript">
-        var texts = [
-            {
-                text: "Тестовий запис 1 Російська держава створює альянс пам'яті з сербськими політичними елітами, експортуючи не тільки відповідні меседжі, але й артефакти, як-от георгіївську стрічку. the export of Russian practices, including the Saint George Ribbon and the Immortal Regiment procession, which have been adopted with enthusiasm by Serbian elites, who wear them during parades.  McGlynn, J. (2020)",
-                categories: {
-                    "cat 1": "option 1",
-                    "cat 2": "option 3",
-                    "cat 3": "option 3",
-                }
-            },
-            {
-                text: "Тестовий запис 2",
-                categories: {
-                    "cat 1": "option 1",
-                    "cat 3": "option 1",
-                }
-            },
-        ]
+    <script type="text/javascript" src="examples.js"> </script>
 
+    <script type="text/javascript">
         function onload() {
             function display(texts) {
                 var content = document.getElementById("content")
@@ -100,6 +39,9 @@
                 })
             }
             display(getData())
+            var caseNumP = document.createElement("p");
+            caseNumP.innerText = "Кількість кейсів у базі: " + texts.length;
+            document.getElementById("header").appendChild(caseNumP);
             document.getElementById("select-cat1").addEventListener("change", listener("cat 1"))
             document.getElementById("select-cat2").addEventListener("change", listener("cat 2"))
             document.getElementById("select-cat3").addEventListener("change", listener("cat 3"))
@@ -108,7 +50,7 @@
     </script>
 </head>
 <body onload="onload()">
-    <div class="header">
+    <div class="header" id="header">
         <h1>Застосування комунікаційної моделі Лассвела до інструменталізації історії в публічному просторі</h1>
         
         <p>Олена Гапак, MSPH25</p>
@@ -125,7 +67,9 @@
         <p>Як користуватися сайтом: <br>
         - Оберіть одну або кілька підкатегорій у фільтрі<br>
         - Сортування відбудеться автоматично, поруч будуть відображені кейси інструменталізації історії за обраними категоріями <br>
-        - Сайт знаходиться в стадії розробки. Кількість кейсів у базі: 2 </p>
+        - Щоб швидко скинути фільтр – оновіть сторінку. 
+        - Щоб переглянути усі кейси з бази – скиньте фільтр.<br>
+        - Сайт знаходиться в стадії розробки.<br>
 
     </div>
 
